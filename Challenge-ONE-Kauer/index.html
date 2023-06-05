@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Configurações básicas do documento -->
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Configuração para melhor compatibilidade com navegadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração para ajustar a escala em dispositivos móveis -->
+    
+    <!-- Estilos e título da página -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter"> 
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <title>Decodificador de texto</title> <!-- Título da página -->
+    
+    <!-- Ícone da página -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body>
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Cabeçalho com logotipo e links sociais -->
+        <header class="logo-divider">
+            <img src="assets/images/vector.svg" alt="Logo Alura" id="logo"> <!-- logotipo da Alura -->
+            <nav id="nav-link">
+                <ul>
+                    <li class="social-media">
+                        <a href="https://www.linkedin.com/in/brenda-kauer/" target="_blank">
+                            <img src="assets/images/linkedin.svg" alt="LinkedIn"> <!--  ícone do LinkedIn -->
+                            <p class="description">LinkedIn</p> 
+                        </a>
+                    </li>
+                    <li class="social-media">
+                        <a href="https://github.com/Brenda-kauer" target="_blank">
+                            <img src="assets/images/github.svg" alt="github"> <!--  ícone do GitHub -->
+                            <p class="description">Github</p> 
+                        </a>
+                    </li>
+                    <li class="social-media">
+                        <a href="https://www.alura.com.br/challenges/challenge-one-logica" target="_blank">
+                            <img src="assets/images/info.svg" alt="info"> <!--  ícone de informação -->
+                            <p class="description">informacao</p> 
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Seção de entrada de texto -->
+        <section id="entrada">
+            <textarea name="msgTxt" id="msgTxt" placeholder="Digite seu texto"></textarea> <!-- Área onde você digita o texto -->
+            <div class="informacao">
+                <img src="assets/images/info.svg" alt="informação"> <!-- Exibe o ícone de informação -->
+                <sub>Aceita maiúsculas e acentos.</sub> <!-- Mostra uma informação sobre o tipo de texto aceito -->
+                <sub><code>Ctrl</code> + <code>Z</code> Limpar.</sub> <!-- Mostra uma informação sobre como limpar o texto -->
+            </div>
+            <div class="inputGroup">
+                <button type="button" class="criptografar" onclick="criptografar()">Criptografar</button> <!-- Botão para criptografar o texto -->
+                <button type="button" id="descriptografar" onclick="descriptografar()" disabled="disabled">Descriptografar</button> <!-- Botão para descriptografar o texto (desabilitado por enquanto) -->
+            </div>
+        </section>
+        
+        <!-- Área de exibição do texto -->
+        <aside id="saida">
+            <div id="semMensagem">
+                <img src="assets/images/principal.svg" alt="Sem mensagem encontrada"> <!-- Exibe uma imagem indicando que nenhuma mensagem foi encontrada -->
+                <h2>Nenhuma mensagem encontrada</h2> <!-- Título informando que nenhuma mensagem foi encontrada -->
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p> <!-- Orientação para digitar um texto válido -->
+            </div>
+            <textarea name="criptoTxt" id="msgCriptografada" readonly></textarea> <!-- Área onde o texto criptografado será exibido (somente leitura) -->
+            <div class="inputGroup">
+                <button type="button" id="copiar" onclick="copiarTexto()">Copiar</button> <!-- Botão para copiar o texto criptografado -->
+                <button type="button" id="limpar" onclick="limparTexto()"> <!-- Botão para limpar o texto criptografado -->
+                    <img src="assets/images/delete.svg" alt="deletar" width="35"> <!-- Ícone de lixeira para indicar a ação de deletar -->
+                </button>
+            </div>
+        </aside>
+    </main>
+    
+    <!-- Rodapé da página -->
+    <footer>
+        <p>Feito com carinho por <a href="https://www.linkedin.com/in/Brenda-kauer/" target="_blank">Brenda Kauer</a></p> 
+    </footer>
+    
+    <script src="assets/js/script.js"></script> 
+</body>
+
+</html>
